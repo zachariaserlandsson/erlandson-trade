@@ -25,16 +25,26 @@ const Header = () => {
         <div
           style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1em', width: 500 }}
         >
-          <Button type='text' icon={<HomeOutlined />} style={{ padding: 0 }}>
+          <Button
+            type='text'
+            icon={<HomeOutlined />}
+            onClick={navigateTo('/')}
+            style={{ padding: 0 }}
+          >
             Hem
           </Button>
-          <Button type='text' icon={<MailOutlined />} style={{ padding: 0 }}>
+          <Button
+            type='text'
+            icon={<MailOutlined />}
+            onClick={navigateTo('/contact')}
+            style={{ padding: 0 }}
+          >
             Kontakt
           </Button>
           <Button
             type='text'
             icon={<FireOutlined />}
-            onClick={navigateTo('/')}
+            onClick={navigateTo('/news')}
             style={{ padding: 0 }}
           >
             Nyheter
@@ -47,7 +57,12 @@ const Header = () => {
           >
             Varor
           </Button>
-          <Button type='text' icon={<DollarOutlined />} style={{ padding: 0 }}>
+          <Button
+            type='text'
+            icon={<DollarOutlined />}
+            onClick={navigateTo('/price-lists')}
+            style={{ padding: 0 }}
+          >
             Prislistor
           </Button>
         </div>
