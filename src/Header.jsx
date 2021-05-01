@@ -22,14 +22,6 @@ const Header = () => {
         >
           <Button
             type='text'
-            icon={<MailOutlined />}
-            onClick={navigateTo('/contact')}
-            style={{ padding: 0 }}
-          >
-            <EtText>Kontakt</EtText>
-          </Button>
-          <Button
-            type='text'
             icon={<FireOutlined />}
             onClick={navigateTo('/news')}
             style={{ padding: 0 }}
