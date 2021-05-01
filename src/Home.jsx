@@ -6,7 +6,7 @@ import { headline, bodyParagraphs } from './assets/strings/Home'
 const Home = () => {
   return (
     <div style={{ padding: '1em 0' }}>
-      <EtText style={{ fontSize: '25px', fontWeight: 575 }}>
+      <EtText style={{ fontSize: '22px', fontWeight: 575 }}>
         <i>{headline}</i>
       </EtText>
       {bodyParagraphs.map((paragraph, index) => (

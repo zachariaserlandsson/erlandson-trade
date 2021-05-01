@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, Button } from 'antd'
-import { MailOutlined, FireOutlined, TagOutlined, DollarOutlined } from '@ant-design/icons'
+import { FireOutlined, TagOutlined, DollarOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
 import EtText from './EtText.jsx'
 
