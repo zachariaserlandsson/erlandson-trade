@@ -1,6 +1,5 @@
 import React from 'react'
-import { Image } from 'antd'
-import { Button } from 'antd'
+import { Image, Button } from 'antd'
 import {
   MailOutlined,
   HomeOutlined,
@@ -9,6 +8,7 @@ import {
   DollarOutlined,
 } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
+import EtText from './EtText.jsx'
 
 const Header = () => {
   const history = useHistory()
@@ -31,7 +31,7 @@ const Header = () => {
             onClick={navigateTo('/')}
             style={{ padding: 0 }}
           >
-            Hem
+            <EtText>Hem</EtText>
           </Button>
           <Button
             type='text'
@@ -39,7 +39,7 @@ const Header = () => {
             onClick={navigateTo('/contact')}
             style={{ padding: 0 }}
           >
-            Kontakt
+            <EtText>Kontakt</EtText>
           </Button>
           <Button
             type='text'
@@ -47,7 +47,7 @@ const Header = () => {
             onClick={navigateTo('/news')}
             style={{ padding: 0 }}
           >
-            Nyheter
+            <EtText>Nyheter</EtText>
           </Button>
           <Button
             type='text'
@@ -55,7 +55,7 @@ const Header = () => {
             onClick={navigateTo('/inventory')}
             style={{ padding: 0 }}
           >
-            Varor
+            <EtText>Varor</EtText>
           </Button>
           <Button
             type='text'
@@ -63,7 +63,7 @@ const Header = () => {
             onClick={navigateTo('/price-lists')}
             style={{ padding: 0 }}
           >
-            Prislistor
+            <EtText>Prislistor</EtText>
           </Button>
         </div>
       </div>
