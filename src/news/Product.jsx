@@ -21,13 +21,15 @@ const Product = ({ product: { headline, imageSources }, children }) => {
       <div style={{ display: 'flex' }}>
         {imageSources &&
           imageSources.map((source) => (
-            <Image
-              preview={false}
-              width={'250px'}
-              height={'250px'}
-              fallback='http://www.erlandsson-trade.se/images/erlandsontrade.jpg'
-              src={source}
-            />
+            <div style={{ marginLeft: '1em' }}>
+              <Image
+                preview={false}
+                width={'250px'}
+                height={'250px'}
+                fallback='http://www.erlandsson-trade.se/images/erlandsontrade.jpg'
+                src={source}
+              />
+            </div>
           ))}
       </div>
     </div>
