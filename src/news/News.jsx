@@ -1,9 +1,8 @@
 import React from 'react'
 import EtText from '../EtText.jsx'
-import { Image } from 'antd'
-import { headline, bodyParagraphs } from '../assets/strings/News'
-import Product from './Product.jsx'
-import { products } from './static/products'
+import { headline } from '../assets/strings/News'
+import Product, { ProductParagraph } from './Product.jsx'
+import jsonProducts from '../products/news.json'
 
 const News = () => {
   return (
@@ -11,23 +10,26 @@ const News = () => {
       <EtText style={{ fontSize: '22px', fontWeight: 575 }}>
         <i>{headline}</i>
       </EtText>
-      {products.map((product) => (
-        <Product headline={product.headline} productImageSource={product.imageSource}>
-          {product.subHeader && (
-            <EtText>
-              <i>{product.subHeader}</i>
-            </EtText>
-          )}
-          {product.paragraphs.map((paragraph) => (
-            <EtText>{paragraph}</EtText>
-          ))}
-          {product.additionalInfo && (
-            <EtText>
-              <a href={product.additionalInfo.href}>{product.additionalInfo.label}</a>
-            </EtText>
-          )}
-        </Product>
-      ))}
+      {jsonProducts.map(
+        (product, index) =>
+          console.log(product) || (
+            <Product key={index} product={product}>
+              {product.subHeader && (
+                <EtText>
+                  <i>{product.subHeader}</i>
+                </EtText>
+              )}
+              {product.bodyParagraphs.map((paragraph) => (
+                <ProductParagraph paragraph={paragraph} />
+              ))}
+              {product.additionalInfo && (
+                <EtText>
+                  <a href={product.additionalInfo.href}>{product.additionalInfo.label}</a>
+                </EtText>
+              )}
+            </Product>
+          )
+      )}
     </div>
   )
 }

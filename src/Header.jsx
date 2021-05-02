@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, Button } from 'antd'
-import { FireOutlined, TagOutlined, DollarOutlined } from '@ant-design/icons'
+import { FireOutlined, TagOutlined, DollarOutlined, MailOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
 import EtText from './EtText.jsx'
 
@@ -43,6 +43,14 @@ const Header = () => {
             style={{ padding: 0 }}
           >
             <EtText>Prislistor</EtText>
+          </Button>
+          <Button
+            type='text'
+            icon={<MailOutlined />}
+            onClick={() => (window.location.href = `mailto:info@erlandson-trade.se`)}
+            style={{ padding: 0 }}
+          >
+            <EtText>Kontakt</EtText>
           </Button>
         </div>
       </div>

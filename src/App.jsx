@@ -5,7 +5,6 @@ import Inventory from './Inventory.jsx'
 import Home from './Home.jsx'
 import News from './news/News.jsx'
 import PriceLists from './PriceLists.jsx'
-import EmailFooter from './EmailFooter.jsx'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
             <Home />
           </Route>
         </Switch>
-        <EmailFooter />
       </div>
     </Router>
   )
