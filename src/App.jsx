@@ -1,7 +1,7 @@
 import 'antd/dist/antd.css'
 import React from 'react'
 import Header from './Header.jsx'
-import Inventory from './Inventory.jsx'
+import Inventory from './inventory/Inventory.jsx'
 import Home from './Home.jsx'
 import News from './news/News.jsx'
 import PriceLists from './PriceLists.jsx'

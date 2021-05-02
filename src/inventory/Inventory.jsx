@@ -1,7 +1,7 @@
 import React from 'react'
 import { Menu } from 'antd'
 import { Link } from 'react-router-dom'
-import EtText from './EtText.jsx'
+import EtText from '../EtText.jsx'
 const { SubMenu } = Menu
 
 const MenuOption = ({ menuText, linkTo, children, ...rest }) => {
