@@ -23,7 +23,8 @@ const _generateProductObject = (row) => {
   return {
     headline: _toCapitalCase(row[0]),
     bodyParagraphs,
-    imageSources: row[3].split(', '),
+    articleId: row[2],
+    imageSources: row[3].split(', ').filter(Boolean),
   }
 }
 

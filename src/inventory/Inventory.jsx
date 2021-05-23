@@ -2,6 +2,7 @@ import React from 'react'
 import { Menu } from 'antd'
 import { Link } from 'react-router-dom'
 import EtText from '../EtText.jsx'
+import CategoryItemsTable from './CategoryItemsTable.jsx'
 const { SubMenu } = Menu
 
 const MenuOption = ({ menuText, linkTo, children, ...rest }) => {
@@ -11,20 +12,33 @@ const MenuOption = ({ menuText, linkTo, children, ...rest }) => {
     </SubMenu>
   ) : (
     <Menu.Item key={menuText} {...rest}>
-      <Link to={linkTo || './'}>{menuText}</Link>
+      <Link to={linkTo || '/inventory'} replace>
+        {menuText}
+      </Link>
     </Menu.Item>
   )
 }
 
-const Inventory = () => {
+const Inventory = ({
+  match: {
+    params: { rootCategory, subCategory },
+  },
+}) => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', padding: '0.75em 0' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '0.75em 0',
+      }}
+    >
       <Menu mode='horizontal'>
         <MenuOption menuText={<EtText>Teak</EtText>}>
           <MenuOption menuText={<EtText>Info</EtText>} />
           <MenuOption menuText={<EtText>Underhåll</EtText>} />
           <MenuOption menuText={<EtText>Nåtning av teakdäck</EtText>} />
-          <MenuOption menuText={<EtText>Teakstock</EtText>} />
+          <MenuOption linkTo='/inventory/teak/teakstock' menuText={<EtText>Teakstock</EtText>} />
           <MenuOption menuText={<EtText>Grabbräcken</EtText>} />
           <MenuOption menuText={<EtText>Flaggstänger</EtText>} />
           <MenuOption menuText={<EtText>Inredning</EtText>} />
@@ -89,6 +103,7 @@ const Inventory = () => {
           <MenuOption menuText={<EtText>Lim</EtText>} />
         </MenuOption>
       </Menu>
+      <CategoryItemsTable rootCategory={rootCategory} subCategory={subCategory} />
     </div>
   )
 }
