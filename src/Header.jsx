@@ -23,7 +23,7 @@ const Header = () => {
           <Button
             type='text'
             icon={<FireOutlined />}
-            onClick={navigateTo('/news')}
+            onClick={navigateTo('/nyheter')}
             style={{ padding: 0 }}
           >
             <EtText>Nyheter</EtText>
@@ -31,7 +31,7 @@ const Header = () => {
           <Button
             type='text'
             icon={<TagOutlined />}
-            onClick={navigateTo('/inventory')}
+            onClick={navigateTo('/varor')}
             style={{ padding: 0 }}
           >
             <EtText>Varor</EtText>
@@ -39,7 +39,7 @@ const Header = () => {
           <Button
             type='text'
             icon={<DollarOutlined />}
-            onClick={navigateTo('/price-lists')}
+            onClick={navigateTo('/prislistor')}
             style={{ padding: 0 }}
           >
             <EtText>Prislistor</EtText>

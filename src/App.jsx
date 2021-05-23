@@ -13,11 +13,11 @@ function App() {
       <Header />
       <div style={{ display: 'flex', flexDirection: 'column', padding: '0 5em' }}>
         <Switch>
-          <Route path='/inventory/:rootCategory?/:subCategory?' component={Inventory} />
-          <Route path='/news'>
+          <Route path='/varor/:rootCategory?/:subCategory?' component={Inventory} />
+          <Route path='/nyheter'>
             <News />
           </Route>
-          <Route path='/price-lists'>
+          <Route path='/prislistor'>
             <PriceLists />
           </Route>
           <Route path='/'>

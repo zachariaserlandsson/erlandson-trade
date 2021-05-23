@@ -38,7 +38,7 @@ const Inventory = ({
           <MenuOption menuText={<EtText>Info</EtText>} />
           <MenuOption menuText={<EtText>Underhåll</EtText>} />
           <MenuOption menuText={<EtText>Nåtning av teakdäck</EtText>} />
-          <MenuOption linkTo='/inventory/teak/teakstock' menuText={<EtText>Teakstock</EtText>} />
+          <MenuOption linkTo='/varor/teak/teakstock' menuText={<EtText>Teakstock</EtText>} />
           <MenuOption menuText={<EtText>Grabbräcken</EtText>} />
           <MenuOption menuText={<EtText>Flaggstänger</EtText>} />
           <MenuOption menuText={<EtText>Inredning</EtText>} />
