@@ -3,6 +3,13 @@ import jsonInventory from '../products/inventory.json'
 import { Table, Image } from 'antd'
 import CategoryBreadcrumb from './CategoryBreadcrumb.jsx'
 
+const _fetchNestedProducts = (object) =>
+  Object.values(object).reduce(
+    (allProducts, value) =>
+      value.length ? allProducts.concat(value) : allProducts.concat(_fetchNestedProducts(value)),
+    []
+  )
+
 const columns = [
   {
     dataIndex: 'productImages',
@@ -37,7 +44,7 @@ const columns = [
 ]
 
 const CategoryItemsTable = ({ rootCategory, subCategory }) => {
-  const products = subCategory ? jsonInventory[subCategory] : []
+  const products = subCategory ? jsonInventory[subCategory] : _fetchNestedProducts(jsonInventory)
   return (
     <div
       style={{
@@ -47,7 +54,13 @@ const CategoryItemsTable = ({ rootCategory, subCategory }) => {
     >
       <CategoryBreadcrumb rootCategory={rootCategory} subCategory={subCategory} />
       {products.length ? (
-        <Table pagination={false} bordered columns={columns} dataSource={products} />
+        <Table
+          pagination={false}
+          bordered
+          columns={columns}
+          dataSource={products}
+          style={{ marginTop: '1em' }}
+        />
       ) : null}
     </div>
   )
