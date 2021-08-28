@@ -53,7 +53,7 @@ const CategoryItemsTable = ({ rootCategory, subCategory }) => {
       }}
     >
       <CategoryBreadcrumb rootCategory={rootCategory} subCategory={subCategory} />
-      {products.length ? (
+      {products && products.length ? (
         <Table
           pagination={false}
           bordered
