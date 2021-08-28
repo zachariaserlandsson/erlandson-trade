@@ -1,34 +1,23 @@
 import React from 'react'
-import jsonInventory from '../products/inventory.json'
+import jsonInventoryBeta from '../products/inventory.json'
 import { Table, Image } from 'antd'
 import CategoryBreadcrumb from './CategoryBreadcrumb.jsx'
 
-const _fetchNestedProducts = (object) =>
-  Object.values(object).reduce(
-    (allProducts, value) =>
-      value.length ? allProducts.concat(value) : allProducts.concat(_fetchNestedProducts(value)),
-    []
-  )
-
 const columns = [
   {
-    dataIndex: 'productImages',
+    dataIndex: 'imagePath',
     render: (_, record) => {
       return (
         <>
-          {record.imageSources.length
-            ? record.imageSources.map((imageSource) => {
-                return (
-                  <Image
-                    preview={false}
-                    width={'250px'}
-                    height={'250px'}
-                    fallback='http://www.erlandsson-trade.se/images/erlandsontrade.jpg'
-                    src={imageSource}
-                  />
-                )
-              })
-            : null}
+          {record.imagePath ? (
+            <Image
+              preview={false}
+              width={'250px'}
+              height={'250px'}
+              fallback='http://www.erlandsson-trade.se/images/erlandsontrade.jpg'
+              src={`http://www.erlandsson-trade.se/images/${record.imagePath}.jpg`}
+            />
+          ) : null}
         </>
       )
     },
@@ -44,7 +33,7 @@ const columns = [
 ]
 
 const CategoryItemsTable = ({ rootCategory, subCategory }) => {
-  const products = subCategory ? jsonInventory[subCategory] : _fetchNestedProducts(jsonInventory)
+  const products = jsonInventoryBeta[rootCategory][subCategory]
   return (
     <div
       style={{
