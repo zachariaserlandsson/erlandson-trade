@@ -3,7 +3,6 @@ import React from 'react'
 import Header from './Header.jsx'
 import Inventory from './inventory/Inventory.jsx'
 import Home from './Home.jsx'
-import News from './news/News.jsx'
 import PriceLists from './PriceLists.jsx'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -14,9 +13,6 @@ function App() {
       <div style={{ display: 'flex', flexDirection: 'column', padding: '0 5em' }}>
         <Switch>
           <Route path='/varor/:rootCategory?/:subCategory?' component={Inventory} />
-          <Route path='/nyheter'>
-            <News />
-          </Route>
           <Route path='/prislistor'>
             <PriceLists />
           </Route>

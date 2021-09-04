@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, Button } from 'antd'
-import { FireOutlined, TagOutlined, DollarOutlined, MailOutlined } from '@ant-design/icons'
+import { TagOutlined, DollarOutlined, MailOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
 import EtText from './EtText.jsx'
 
@@ -20,14 +20,6 @@ const Header = () => {
         <div
           style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1em', width: 500 }}
         >
-          <Button
-            type='text'
-            icon={<FireOutlined />}
-            onClick={navigateTo('/nyheter')}
-            style={{ padding: 0 }}
-          >
-            <EtText>Nyheter</EtText>
-          </Button>
           <Button
             type='text'
             icon={<TagOutlined />}

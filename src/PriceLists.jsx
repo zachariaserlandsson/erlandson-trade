@@ -6,7 +6,7 @@ import { RightCircleOutlined } from '@ant-design/icons'
 
 const PriceLists = () => {
   return (
-    <div>
+    <div style={{ marginTop: '0.75em' }}>
       <EtText>{introduction}</EtText>
       <MaroonHeader text={priceLists.header} />
       <BulletList
