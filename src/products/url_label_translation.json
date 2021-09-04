@@ -20,10 +20,6 @@
     "url": "inredning"
   },
   {
-    "label": "Bordsstativ",
-    "url": "bordsstativ"
-  },
-  {
     "label": "Lister, hörn & virke",
     "url": "lister-horn-virke"
   },
@@ -124,56 +120,56 @@
     "url": "grabbracken-hajfenor"
   },
   {
-    "label": "Bojfångare",
-    "url": "bojfangare"
-  },
-  {
-    "label": "Flaggstänger & mantåg",
-    "url": "flaggstanger-mantag"
-  },
-  {
-    "label": "Septik- & vattentankar",
-    "url": "septik-vattentankar"
+    "label": "Plattformar & stegar",
+    "url": "plattformar-stegar"
   },
   {
     "label": "Pollare",
     "url": "pollare"
   },
   {
-    "label": "Plattformar & stegar",
-    "url": "plattformar-stegar"
+    "label": "Septik- & vattentankar",
+    "url": "septik-vattentankar"
   },
   {
-    "label": "Kemi",
-    "url": "kemi"
+    "label": "Flaggstänger & mantåg",
+    "url": "flaggstanger-mantag"
   },
   {
-    "label": "Lim",
-    "url": "lim"
-  },
-  {
-    "label": "Jotun",
-    "url": "jotun"
-  },
-  {
-    "label": "Sika",
-    "url": "sika"
-  },
-  {
-    "label": "International",
-    "url": "international"
+    "label": "Bojfångare",
+    "url": "bojfangare"
   },
   {
     "label": "Bockar & vaggor",
     "url": "bockar-vaggor"
   },
   {
+    "label": "Tyresö",
+    "url": "tyreso"
+  },
+  {
     "label": "Täby",
     "url": "taby"
   },
   {
-    "label": "Tyresö",
-    "url": "tyreso"
+    "label": "Kemi",
+    "url": "kemi"
+  },
+  {
+    "label": "International",
+    "url": "international"
+  },
+  {
+    "label": "Sika",
+    "url": "sika"
+  },
+  {
+    "label": "Jotun",
+    "url": "jotun"
+  },
+  {
+    "label": "Lim",
+    "url": "lim"
   },
   {
     "label": "Info",

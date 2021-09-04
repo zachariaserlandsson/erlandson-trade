@@ -26,6 +26,10 @@ const columns = [
     dataIndex: 'headline',
   },
   {
+    title: 'Produktbeskrivning',
+    dataIndex: 'body',
+  },
+  {
     title: 'Artikelnummer',
     dataIndex: 'articleId',
   },

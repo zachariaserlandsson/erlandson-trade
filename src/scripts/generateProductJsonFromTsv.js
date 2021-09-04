@@ -10,6 +10,7 @@ const _generateProductObject = (row) => {
     imagePath: row[3] === '-' ? null : row[3], // '-' used as n/a in product sheet
     headline: row[4],
     body: row[5],
+    isAvailable: !Boolean(row[6]),
   }
   return productData.rootCategory && productData.subCategory ? productData : null
 }
@@ -41,10 +42,15 @@ const _generateUrlLabelTranslatorObject = (products) => {
     .concat([{ label: 'Info', url: 'info' }])
 }
 
+const _isAvailable = (productObject) => productObject.isAvailable
+
 const generateProductJsonFromTsv = (tsvPath) => {
   const sheetRows = fs.readFileSync(tsvPath).toString().split('\n').map(_tabSplitRow)
   const nonTableHeadRows = sheetRows.slice(1)
-  const productObjects = nonTableHeadRows.map(_generateProductObject).filter(Boolean)
+  const productObjects = nonTableHeadRows
+    .map(_generateProductObject)
+    .filter(Boolean)
+    .filter(_isAvailable)
   const structuredProducts = productObjects.reduce((currentObject, product) => {
     return {
       ...currentObject,
