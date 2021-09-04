@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/erlandson-trade/static/css/main.707d1fc8.chunk.css",
-    "main.js": "/erlandson-trade/static/js/main.b74317f2.chunk.js",
-    "main.js.map": "/erlandson-trade/static/js/main.b74317f2.chunk.js.map",
+    "main.js": "/erlandson-trade/static/js/main.2e959e6f.chunk.js",
+    "main.js.map": "/erlandson-trade/static/js/main.2e959e6f.chunk.js.map",
     "runtime-main.js": "/erlandson-trade/static/js/runtime-main.19be647a.js",
     "runtime-main.js.map": "/erlandson-trade/static/js/runtime-main.19be647a.js.map",
     "static/css/2.1e58ee36.chunk.css": "/erlandson-trade/static/css/2.1e58ee36.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.1e58ee36.chunk.css",
     "static/js/2.fafac7d5.chunk.js",
     "static/css/main.707d1fc8.chunk.css",
-    "static/js/main.b74317f2.chunk.js"
+    "static/js/main.2e959e6f.chunk.js"
   ]
 }
