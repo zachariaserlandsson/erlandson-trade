@@ -21,7 +21,7 @@ export const BulletList = ({ bulletPoints, numbered, startFrom }) => {
       {bulletPoints.map((bulletPoint, index) => {
         return (
           <li key={index}>
-            <EtText key={index}>{bulletPoint}</EtText>
+            <EtText>{bulletPoint}</EtText>
           </li>
         )
       })}
