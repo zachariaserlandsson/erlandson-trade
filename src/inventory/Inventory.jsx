@@ -5,6 +5,8 @@ import EtText from '../EtText.jsx'
 import CategoryItemsTable from './CategoryItemsTable.jsx'
 import jsonInventory from '../products/inventory.json'
 import { getPath, getCategoriesFromPath } from '../products/util'
+import InfoPages from './info/index'
+import CategoryBreadcrumb from './CategoryBreadcrumb.jsx'
 const { SubMenu } = Menu
 
 const MenuOption = ({ menuText, linkTo, children, ...rest }) => {
@@ -25,6 +27,12 @@ const _generateMenuOptions = () => {
   return Object.keys(jsonInventory).map((rootCategory) => {
     return (
       <MenuOption menuText={<EtText>{rootCategory}</EtText>}>
+        {InfoPages[rootCategory] ? (
+          <MenuOption
+            linkTo={`/varor/${getPath({ rootCategory, subCategory: 'Info' })}`}
+            menuText={<EtText>Info</EtText>}
+          />
+        ) : null}
         {Object.keys(jsonInventory[rootCategory]).map((subCategory) => {
           return (
             <MenuOption
@@ -38,12 +46,17 @@ const _generateMenuOptions = () => {
   })
 }
 
+const InfoWrapper = ({ children }) => {
+  return <div style={{ marginTop: '1em' }}>{children}</div>
+}
+
 const Inventory = ({
   match: {
     params: { rootCategory: rootCategoryPath, subCategory: subCategoryPath },
   },
 }) => {
   const { rootCategory, subCategory } = getCategoriesFromPath({ rootCategoryPath, subCategoryPath })
+  const InfoComponent = InfoPages[rootCategory]
   return (
     <div
       style={{
@@ -54,7 +67,12 @@ const Inventory = ({
       }}
     >
       <Menu mode='horizontal'>{_generateMenuOptions()}</Menu>
-      <CategoryItemsTable rootCategory={rootCategory} subCategory={subCategory} />
+      <CategoryBreadcrumb rootCategory={rootCategory} subCategory={subCategory} />
+      {subCategory === 'Info' ? (
+        <InfoWrapper>{<InfoComponent /> || null}</InfoWrapper>
+      ) : (
+        <CategoryItemsTable rootCategory={rootCategory} subCategory={subCategory} />
+      )}
     </div>
   )
 }

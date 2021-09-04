@@ -1,7 +1,6 @@
 import React from 'react'
 import jsonInventory from '../products/inventory.json'
 import { Table, Image } from 'antd'
-import CategoryBreadcrumb from './CategoryBreadcrumb.jsx'
 
 const columns = [
   {
@@ -54,7 +53,6 @@ const CategoryItemsTable = ({ rootCategory, subCategory }) => {
         paddingBottom: '2em',
       }}
     >
-      <CategoryBreadcrumb rootCategory={rootCategory} subCategory={subCategory} />
       {products && products.length ? (
         <Table
           pagination={false}

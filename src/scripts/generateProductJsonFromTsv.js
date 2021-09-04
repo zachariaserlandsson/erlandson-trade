@@ -31,12 +31,14 @@ const _generateUrlLabelTranslatorObject = (products) => {
   const allCategoryNames = Object.keys(products).reduce((categories, rootCategory) => {
     return categories.concat([rootCategory, ...Object.keys(products[rootCategory])])
   }, [])
-  return allCategoryNames.map((categoryName) => {
-    return {
-      label: categoryName,
-      url: _urlifyCategoryName(categoryName),
-    }
-  })
+  return allCategoryNames
+    .map((categoryName) => {
+      return {
+        label: categoryName,
+        url: _urlifyCategoryName(categoryName),
+      }
+    })
+    .concat([{ label: 'Info', url: 'info' }])
 }
 
 const generateProductJsonFromTsv = (tsvPath) => {
