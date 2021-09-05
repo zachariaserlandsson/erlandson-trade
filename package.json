@@ -1,6 +1,5 @@
 {
   "name": "erlandson-trade",
-  "homepage": "http://zachariaserlandsson.github.io/erlandson-trade",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
