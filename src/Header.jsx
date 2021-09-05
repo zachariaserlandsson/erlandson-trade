@@ -2,6 +2,7 @@ import React from 'react'
 import { Image, Button } from 'antd'
 import { TagOutlined, DollarOutlined, MailOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
+import { fetchResourceAtPath } from './util'
 import EtText from './EtText.jsx'
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
         <Image
           preview={false}
           width={500}
-          src={require('./assets/images/erlandsontrade.jpg').default}
+          src={fetchResourceAtPath('/assets/images/erlandsontrade.jpg')}
           onClick={navigateTo('/')}
           style={{ cursor: 'pointer' }}
         />

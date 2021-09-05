@@ -11,6 +11,7 @@ const _generateProductObject = (row) => {
     headline: row[4],
     body: row[5],
     isAvailable: !Boolean(row[6]),
+    imagePathWithSuffix: row[7] === '-' ? null : row[7], // '-' used as n/a in product sheet
   }
   return productData.rootCategory && productData.subCategory ? productData : null
 }
@@ -63,6 +64,7 @@ const generateProductJsonFromTsv = (tsvPath) => {
           {
             articleId: product.articleId,
             imagePath: product.imagePath,
+            imagePathWithSuffix: product.imagePathWithSuffix,
             headline: product.headline,
             body: product.body,
           },

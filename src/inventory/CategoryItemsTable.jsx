@@ -1,6 +1,7 @@
 import React from 'react'
 import jsonInventory from '../products/inventory.json'
 import { Table, Image } from 'antd'
+import { fetchResourceAtPath } from '../util'
 
 const columns = [
   {
@@ -8,13 +9,13 @@ const columns = [
     render: (_, record) => {
       return (
         <>
-          {record.imagePath ? (
+          {record.imagePathWithSuffix ? (
             <Image
               preview={false}
               width={'250px'}
               height={'250px'}
               fallback='http://www.erlandsson-trade.se/images/erlandsontrade.jpg'
-              src={`http://www.erlandsson-trade.se/images/${record.imagePath}.jpg`}
+              src={fetchResourceAtPath(`/assets/images/${record.imagePathWithSuffix}`)}
             />
           ) : null}
         </>

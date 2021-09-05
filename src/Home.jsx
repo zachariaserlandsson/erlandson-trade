@@ -2,6 +2,7 @@ import React from 'react'
 import EtText from './EtText.jsx'
 import { Image } from 'antd'
 import { headline, bodyParagraphs } from './assets/strings/Home'
+import { fetchResourceAtPath } from './util'
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
         <Image
           preview={false}
           width={'35%'}
-          src='http://www.erlandsson-trade.se/images/shelf.JPG'
+          src={fetchResourceAtPath('/assets/images/shelf.JPG')}
         />
       </div>
     </div>
