@@ -13,7 +13,7 @@ const Header = () => {
         <Image
           preview={false}
           width={500}
-          src='http://www.erlandsson-trade.se/images/erlandsontrade.JPG'
+          src={require('./assets/images/erlandsontrade.jpg').default}
           onClick={navigateTo('/')}
           style={{ cursor: 'pointer' }}
         />
