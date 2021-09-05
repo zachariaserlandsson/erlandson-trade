@@ -13,13 +13,14 @@ import CenteredImage from './CenteredImage.jsx'
 import { TextWithMargin, MaroonHeader } from './InfoTexts.jsx'
 import { RightCircleOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
+import { fetchResourceAtPath } from '../../util'
 
 const SteamWoodInfo = () => {
   const history = useHistory()
   const navigateTo = (url) => () => history.replace(url)
   return (
     <div>
-      <CenteredImage src='http://www.erlandson-trade.se/images/Askeladden1.jpg' />
+      <CenteredImage src={fetchResourceAtPath('/assets/images/Askeladden1.jpg')} />
       <TextWithMargin text={introduction} />
       <MaroonHeader text={advantages.header} />
       <EtText>{advantages.body}</EtText>
@@ -46,7 +47,7 @@ const SteamWoodInfo = () => {
       <div style={{ marginTop: '1em' }}>
         {usageAreas.examples.map((example, index) => (
           <div key={index} style={{ marginBottom: '1em' }}>
-            <CenteredImage src={example.src} />
+            <CenteredImage src={fetchResourceAtPath(`/assets/images/${example.src}`)} />
             <EtText style={{ textAlign: 'center' }}>
               <i>{example.title}</i>
             </EtText>

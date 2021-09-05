@@ -40,31 +40,31 @@ export const usageAreas = {
   examples: [
     {
       title: 'Maritime Møbler AS:',
-      src: 'http://www.erlandson-trade.se/images/Maritime.jpg',
+      src: 'Maritime.jpg',
     },
     {
       title: 'Askeladden (däcksmaterial, badplattform)',
-      src: 'http://www.erlandson-trade.se/images/Askeladden2.jpg',
+      src: 'Askeladden2.jpg',
     },
     {
       title: 'Windy boats, däcksmaterial',
-      src: 'http://www.erlandson-trade.se/images/Windy1.jpg',
+      src: 'Windy1.jpg',
     },
     {
       title: 'Windy boats, interiör',
-      src: 'http://www.erlandson-trade.se/images/Windy2.jpg',
+      src: 'Windy2.jpg',
     },
     {
       title: 'Vestadmyr (landgångar)',
-      src: 'http://www.erlandson-trade.se/images/Vestadmyr1.jpg',
+      src: 'Vestadmyr1.jpg',
     },
     {
       title: 'Princess Yachts och Sunseeker Yachts (däcksmaterial)',
-      src: 'http://www.erlandson-trade.se/images/Princess1.jpg',
+      src: 'Princess1.jpg',
     },
     {
       title: 'Princess Yachts och Sunseeker Yachts (interiör)',
-      src: 'http://www.erlandson-trade.se/images/Princess2.jpg',
+      src: 'Princess2.jpg',
     },
   ],
 }

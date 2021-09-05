@@ -3,11 +3,12 @@ import EtText from '../../EtText.jsx'
 import { introduction, advantages, origins, deforestation } from '../../assets/strings/TeakInfo'
 import CenteredImage from './CenteredImage.jsx'
 import { TextWithMargin, MaroonHeader, BulletList } from './InfoTexts.jsx'
+import { fetchResourceAtPath } from '../../util'
 
 const TeakInfo = () => {
   return (
     <div style={{ marginBottom: '1em' }}>
-      <CenteredImage src='http://www.erlandson-trade.se/images/teakleaves.gif' />
+      <CenteredImage src={fetchResourceAtPath('/assets/images/teakleaves.gif')} />
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <TextWithMargin text={introduction} />
         <MaroonHeader text={advantages.header} />
