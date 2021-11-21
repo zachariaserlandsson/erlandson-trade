@@ -9,6 +9,7 @@ import CopyToClipboard from 'react-copy-to-clipboard'
 const Header = () => {
   const history = useHistory()
   const navigateTo = (url) => () => history.replace(url)
+  const mailAdress = 'info@erlandson-trade.se'
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '1em' }}>
       <div>
@@ -41,9 +42,9 @@ const Header = () => {
           <Popover
             content={
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <p style={{ margin: 0 }}>info@erlandson-trade.se</p>
+                <p style={{ margin: 0 }}>{mailAdress}</p>
                 <CopyToClipboard
-                  text='info@erlandson-trade.se'
+                  text={mailAdress}
                   onCopy={() => message.info('Kopierade mail-adressen!')}
                 >
                   <Button style={{ marginLeft: '0.5em' }} shape='circle' icon={<CopyOutlined />} />
@@ -54,7 +55,7 @@ const Header = () => {
             <Button
               type='text'
               icon={<MailOutlined />}
-              onClick={() => (window.location.href = `mailto:info@erlandson-trade.se`)}
+              onClick={() => (window.location.href = `mailto:${mailAdress}`)}
               style={{ padding: 0 }}
             >
               <EtText>Kontakt</EtText>
