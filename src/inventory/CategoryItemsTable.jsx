@@ -5,6 +5,10 @@ import { fetchResourceAtPath } from '../util'
 
 const columns = [
   {
+    title: 'Artikelnummer',
+    dataIndex: 'articleId',
+  },
+  {
     dataIndex: 'imagePath',
     render: (_, record) => {
       return (
@@ -12,8 +16,6 @@ const columns = [
           {record.imagePathWithSuffix ? (
             <Image
               preview={false}
-              width={'250px'}
-              height={'250px'}
               fallback='http://www.erlandsson-trade.se/images/erlandsontrade.jpg'
               src={fetchResourceAtPath(`/assets/images/${record.imagePathWithSuffix}`)}
             />
@@ -23,16 +25,12 @@ const columns = [
     },
   },
   {
-    title: 'Produktnamn',
+    title: 'Artikel',
     dataIndex: 'headline',
   },
   {
-    title: 'Produktbeskrivning',
+    title: 'Beskrivning',
     dataIndex: 'body',
-  },
-  {
-    title: 'Artikelnummer',
-    dataIndex: 'articleId',
   },
 ]
 
