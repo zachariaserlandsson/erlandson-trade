@@ -1,9 +1,10 @@
 import React from 'react'
-import { Image, Button } from 'antd'
-import { TagOutlined, DollarOutlined, MailOutlined } from '@ant-design/icons'
+import { Image, Button, Popover, message } from 'antd'
+import { TagOutlined, DollarOutlined, MailOutlined, CopyOutlined } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
 import { fetchResourceAtPath } from './util'
 import EtText from './EtText.jsx'
+import CopyToClipboard from 'react-copy-to-clipboard'
 
 const Header = () => {
   const history = useHistory()
@@ -37,14 +38,28 @@ const Header = () => {
           >
             <EtText>Prislistor</EtText>
           </Button>
-          <Button
-            type='text'
-            icon={<MailOutlined />}
-            onClick={() => (window.location.href = `mailto:info@erlandson-trade.se`)}
-            style={{ padding: 0 }}
+          <Popover
+            content={
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <p style={{ margin: 0 }}>info@erlandson-trade.se</p>
+                <CopyToClipboard
+                  text='info@erlandson-trade.se'
+                  onCopy={() => message.info('Kopierade mail-adressen!')}
+                >
+                  <Button style={{ marginLeft: '0.5em' }} shape='circle' icon={<CopyOutlined />} />
+                </CopyToClipboard>
+              </div>
+            }
           >
-            <EtText>Kontakt</EtText>
-          </Button>
+            <Button
+              type='text'
+              icon={<MailOutlined />}
+              onClick={() => (window.location.href = `mailto:info@erlandson-trade.se`)}
+              style={{ padding: 0 }}
+            >
+              <EtText>Kontakt</EtText>
+            </Button>
+          </Popover>
         </div>
       </div>
     </div>
