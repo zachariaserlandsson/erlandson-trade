@@ -46,9 +46,18 @@ const _getAllInventoryItems = () =>
     []
   )
 
+const _getInventoryItems = ({ rootCategory, subCategory }) =>
+  rootCategory && subCategory
+    ? jsonInventory[rootCategory][subCategory]
+    : rootCategory
+    ? Object.values(jsonInventory[rootCategory]).reduce(
+        (currentItems, subCategoryItems) => currentItems.concat(subCategoryItems),
+        []
+      )
+    : _getAllInventoryItems()
+
 const CategoryItemsTable = ({ rootCategory, subCategory }) => {
-  const products =
-    rootCategory && subCategory ? jsonInventory[rootCategory][subCategory] : _getAllInventoryItems()
+  const products = _getInventoryItems({ rootCategory, subCategory })
   return (
     <div
       style={{

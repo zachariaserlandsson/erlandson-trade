@@ -1,7 +1,7 @@
 const urlLabelTranslationJson = require('./url_label_translation.json')
 
 const _translateValue = ({ value, from, to }) => {
-  if (!value) return
+  if (!value) return ''
   const matchingTranslation = urlLabelTranslationJson.find(
     (translation) => translation[from] === value
   )
