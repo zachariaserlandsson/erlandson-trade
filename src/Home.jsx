@@ -18,7 +18,7 @@ const Home = () => {
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2em' }}>
         <Image
           preview={false}
-          width={'35%'}
+          width={'45%'}
           src={fetchResourceAtPath('/assets/images/shelf.JPG')}
         />
       </div>

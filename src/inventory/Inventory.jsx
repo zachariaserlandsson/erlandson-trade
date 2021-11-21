@@ -29,14 +29,14 @@ const _generateMenuOptions = () => {
       <MenuOption menuText={<EtText>{rootCategory}</EtText>}>
         {InfoPages[rootCategory] ? (
           <MenuOption
-            linkTo={`/varor/${getPath({ rootCategory, subCategory: 'Info' })}`}
+            linkTo={`/artiklar/${getPath({ rootCategory, subCategory: 'Info' })}`}
             menuText={<EtText>Info</EtText>}
           />
         ) : null}
         {Object.keys(jsonInventory[rootCategory]).map((subCategory) => {
           return (
             <MenuOption
-              linkTo={`/varor/${getPath({ rootCategory, subCategory })}`}
+              linkTo={`/artiklar/${getPath({ rootCategory, subCategory })}`}
               menuText={<EtText>{subCategory}</EtText>}
             />
           )

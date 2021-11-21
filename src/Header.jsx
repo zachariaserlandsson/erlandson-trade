@@ -24,10 +24,10 @@ const Header = () => {
           <Button
             type='text'
             icon={<TagOutlined />}
-            onClick={navigateTo('/varor')}
+            onClick={navigateTo('/artiklar')}
             style={{ padding: 0 }}
           >
-            <EtText>Varor</EtText>
+            <EtText>Artiklar</EtText>
           </Button>
           <Button
             type='text'

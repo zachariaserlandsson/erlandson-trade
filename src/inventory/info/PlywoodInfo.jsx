@@ -25,7 +25,7 @@ const PlywoodInfo = () => {
       <div style={{ display: 'flex' }}>
         <MaroonHeader style={{ marginTop: 0 }} text={teakPlywood.header} />
         <RightCircleOutlined
-          onClick={navigateTo('/varor/plywood/teakplywood')}
+          onClick={navigateTo('/artiklar/plywood/teakplywood')}
           style={{
             display: 'flex',
             alignContent: 'center',
@@ -40,7 +40,7 @@ const PlywoodInfo = () => {
       <div style={{ display: 'flex' }}>
         <MaroonHeader style={{ marginTop: 0 }} text={mahognyPlywood.header} />
         <RightCircleOutlined
-          onClick={navigateTo('/varor/plywood/teakplywood')}
+          onClick={navigateTo('/artiklar/plywood/teakplywood')}
           style={{
             display: 'flex',
             alignContent: 'center',

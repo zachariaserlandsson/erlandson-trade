@@ -9,7 +9,7 @@ const CategoryBreadcrumb = ({ rootCategory, subCategory }) => {
     <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '1em' }}>
       <Breadcrumb>
         <Breadcrumb.Item>
-          <EtText style={{ display: 'inline', fontSize: '25px' }}>Varor</EtText>
+          <EtText style={{ display: 'inline', fontSize: '25px' }}>Artiklar</EtText>
         </Breadcrumb.Item>
         <Breadcrumb.Item>
           <EtText style={{ display: 'inline', fontSize: '25px' }}>

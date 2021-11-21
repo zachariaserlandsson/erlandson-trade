@@ -12,7 +12,7 @@ function App() {
       <Header />
       <div style={{ display: 'flex', flexDirection: 'column', padding: '0 5em' }}>
         <Switch>
-          <Route path='/varor/:rootCategory?/:subCategory?' component={Inventory} />
+          <Route path='/artiklar/:rootCategory?/:subCategory?' component={Inventory} />
           <Route path='/prislistor'>
             <PriceLists />
           </Route>

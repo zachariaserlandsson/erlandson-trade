@@ -38,7 +38,7 @@ const SteamWoodInfo = () => {
       <div style={{ display: 'flex' }}>
         <EtText>{products.body}</EtText>
         <RightCircleOutlined
-          onClick={navigateTo('/varor/steamwood/lister-virke')}
+          onClick={navigateTo('/artiklar/steamwood/lister-virke')}
           style={{ marginLeft: '0.5em', fontSize: '18px', color: '#3498DB' }}
         />
       </div>
