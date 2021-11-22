@@ -5,7 +5,7 @@ import EtText from './EtText.jsx'
 
 const MobileMenu = ({ navigateTo, closeMenu }) => {
   return (
-    <Menu>
+    <Menu style={{ border: '0.5px solid gray', borderRadius: '5px' }}>
       <Menu.Item
         key='0'
         onClick={() => {
