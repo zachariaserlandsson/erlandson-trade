@@ -6,3 +6,5 @@ export const fetchResourceAtPath = (path) => {
     console.error(`Error encountered attempting to fetch resource at path ${path}`, error)
   }
 }
+
+export const mailAdress = 'info@erlandson-trade.se'

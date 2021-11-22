@@ -5,12 +5,19 @@ import Inventory from './inventory/Inventory.jsx'
 import Home from './Home.jsx'
 import PriceLists from './PriceLists.jsx'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import isMobile from 'is-mobile'
 
 function App() {
   return (
     <Router>
       <Header />
-      <div style={{ display: 'flex', flexDirection: 'column', padding: '0 5em' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          padding: isMobile() ? '0 1.5em' : '0 5em',
+        }}
+      >
         <Switch>
           <Route path='/artiklar/:rootCategory?/:subCategory?' component={Inventory} />
           <Route path='/prislistor'>

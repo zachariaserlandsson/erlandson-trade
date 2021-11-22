@@ -2,6 +2,8 @@ import React from 'react'
 import jsonInventory from '../products/inventory.json'
 import { Table, Image } from 'antd'
 import { fetchResourceAtPath } from '../util'
+import isMobile from 'is-mobile'
+import MobileCardList from './MobileCardList'
 
 const columns = [
   {
@@ -66,13 +68,17 @@ const CategoryItemsTable = ({ rootCategory, subCategory }) => {
       }}
     >
       {products && products.length ? (
-        <Table
-          pagination={false}
-          bordered
-          columns={columns}
-          dataSource={products}
-          style={{ marginTop: '1em' }}
-        />
+        isMobile() ? (
+          <MobileCardList products={products} />
+        ) : (
+          <Table
+            pagination={false}
+            bordered
+            columns={columns}
+            dataSource={products}
+            style={{ marginTop: '1em' }}
+          />
+        )
       ) : null}
     </div>
   )
