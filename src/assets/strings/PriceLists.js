@@ -16,6 +16,10 @@ export const priceLists = {
       label: 'Mahogny inredning',
       src: '/prislista_mahogny.pdf',
     },
+    {
+      label: 'Flaggor och flaggstänger',
+      src: '/prislista_flaggor.pdf',
+    },
   ],
 }
 
