@@ -20,6 +20,10 @@ export const priceLists = {
       label: 'Flaggor och flaggstänger',
       src: '/prislista_flaggor.pdf',
     },
+    {
+      label: 'Rostfritt',
+      src: '/prislista_rostfritt.pdf',
+    },
   ],
 }
 
